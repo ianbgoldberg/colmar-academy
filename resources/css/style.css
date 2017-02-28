@@ -8,6 +8,18 @@ html {
   top: 4rem; /* To offset for fixed header. */
 }
 
+.mobile {
+  display: none;
+}
+
+/* for Media query
+.mobile {
+  display: block;
+}
+.desktop {
+  display: none:
+} */
+
 /* HEADER */
   header {
     height: 4rem;
