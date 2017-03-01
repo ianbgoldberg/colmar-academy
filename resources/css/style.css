@@ -5,8 +5,20 @@ html {
   font-family: sans-serif;
 }
 
+/* when I add this the header disappears
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+*/
+
 .content {
-  max-width: 1355px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   top: 4rem; /* To offset for fixed header. */
 }
@@ -123,19 +135,28 @@ header .desktop ul li {
 /* BANNER */
 
 .banner {
+  width: 100%;
   background-color: #d0d0d0;
   padding: 2rem 1.5rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner_content {
+  max-width: 1220px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
-.banner img {
+.banner_content img {
   width: 60%;
   height: auto;
 }
 
-.banner .banner_text {
+.banner_content .banner_text {
   height: 100%;
   color: #505050;
   margin-left: 2.5rem;
@@ -145,18 +166,18 @@ header .desktop ul li {
   justify-content: space-between;
 }
 
-.banner .banner_text h1 {
+.banner_content .banner_text h1 {
   margin: 1rem 0;
   font-size: 2rem;
   font-weight: 700;
   line-height: 2rem;
 }
 
-.banner .banner_text h2 {
+.banner_content .banner_text h2 {
   margin: 1rem 0;
 }
 
-.banner .banner_text p {
+.banner_content .banner_text p {
   margin: 1rem 0;
   color: #ffffff;
   background-color: #505050;
@@ -166,32 +187,32 @@ header .desktop ul li {
 }
 
 @media only screen and (max-width: 805px) {
-  .banner {
+  .banner_content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .banner img {
+  .banner_content img {
     width: 100%;
     height: auto;
   }
 
-  .banner .banner_text {
+  .banner_content .banner_text {
     margin: 2rem 1rem;
   }
 
-  .banner .banner_text h1 {
+  .banner_content .banner_text h1 {
     margin: 0 0 2rem 0;
     font-size: 2rem;
   }
 
-  .banner .banner_text h2 {
+  .banner_content .banner_text h2 {
     margin: 0 0 1.5rem 0;
   }
 
-  .banner .banner_text p {
+  .banner_content .banner_text p {
     margin: 0;
   }
 
@@ -204,7 +225,6 @@ header .desktop ul li {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin: 0 1.5rem;
   border-bottom: 1px solid #d0d0d0;
 }
 
@@ -213,7 +233,8 @@ header .desktop ul li {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 2rem 1.5rem 2rem 0;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  border-right: 1px solid #d0d0d0;
 }
 
 .info .info_main img {
@@ -238,7 +259,6 @@ header .desktop ul li {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  border-left: 1px solid #d0d0d0;
 }
 
 .info .info_sides .info_side {
@@ -322,7 +342,7 @@ header .desktop ul li {
 /* COURSES */
 
 .courses {
-  flex-shrink: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -374,7 +394,7 @@ header .desktop ul li {
   margin-bottom: 0.5rem
 }
 
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 885px) {
 
   .courses {
     background-color: #ffffff;
@@ -413,5 +433,42 @@ header .desktop ul li {
 }
 
 /* THESIS */
+
+/* not working
+.thesis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 2rem 1.5rem;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.thesis .thesis_content {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thesis .thesis_content .thesis_video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.thesis .thesis_content .thesis_sides {
+  width: 26.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.thesis .thesis_content .thesis_sides .thesis_side{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}*/
 
 /* FOOTER */
