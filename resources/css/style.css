@@ -6,6 +6,7 @@ html {
 }
 
 .content {
+  max-width: 1355px;
   position: relative;
   top: 4rem; /* To offset for fixed header. */
 }
@@ -14,15 +15,39 @@ html {
   display: none;
 }
 
-@media only screen and (max-width: 940px) {
+h1 {
+  color: #505050;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  color: #505050;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+
+h3 {
+  font-size: 0.75rem;
+  color: #808080;
+}
+
+p {
+  color: #b0b0b0;
+  font-weight: 200;
+
+}
+
+/* THis is not working for "header .desktop", or ".info .info_main"*/
+@media only screen and (max-width: 805px) {
   .mobile {
     display: inherit;
   }
 
   .desktop {
     display: none;
-  } /*  THis is not working for the header  */
-
+  }
 }
 
 /* HEADER */
@@ -84,7 +109,6 @@ header .desktop ul li {
 /* BANNER */
 
 .banner {
-  height: 100%;
   background-color: #d0d0d0;
   padding: 2rem 1.5rem;
   display: inline-flex;
@@ -109,16 +133,13 @@ header .desktop ul li {
 
 .banner .banner_text h1 {
   margin: 1rem 0;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
 .banner .banner_text h2 {
   margin: 1rem 0;
-  font-size: 1.5rem;
-  line-height: 2rem;
-
 }
 
 .banner .banner_text p {
@@ -130,7 +151,7 @@ header .desktop ul li {
   text-align: center;
 }
 
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 805px) {
   .banner {
     display: flex;
     flex-direction: column;
@@ -162,9 +183,116 @@ header .desktop ul li {
 
 }
 
-
-
 /* INFO */
+
+.info {
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1.5rem;
+}
+
+.info .info_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2rem 1.5rem 2rem 0;
+}
+
+.info .info_main img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.info .info_main h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.info .info_main p {
+  margin-bottom: 3rem;
+  line-height: 1.25rem;
+}
+
+.info .info_sides {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-left: 1px solid #d0d0d0;
+}
+
+.info .info_sides .info_side {
+  width: 26.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info .info_sides .info_side img {
+  width: 35%;
+  height: auto;
+  margin: 1rem;
+  border: 1px solid #d0d0d0;
+}
+
+.info .info_sides .info_side .info_side_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.info .info_sides .info_side .info_side_text h2 {
+  margin-bottom: 0.5rem;
+}
+
+.info .info_sides .info_side .info_side_text p {
+  margin-bottom: 0.5rem;
+}
+
+.info .info_sides .info_side .info_side_text a {
+  color: #0099ff;
+  font-size: 0.75rem;
+}
+
+@media only screen and (max-width: 805px) {
+
+  .info {
+    margin: 0;
+    display: flex;
+  }
+
+  .info .info_sides {
+    border-left: 0px;
+    margin-bottom: 1rem;
+  }
+
+  .info .info_sides .info_side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  .info .info_sides .info_side img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border: 0px;
+  }
+
+  .info .info_sides .info_side .info_side_text {
+    margin: 0 1rem;
+  }
+
+}
 
 /* COURSES */
 
