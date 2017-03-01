@@ -398,7 +398,7 @@ header .desktop ul li {
 
   .courses {
     background-color: #ffffff;
-    padding: 2rem 1rem 1.5rem 1rem;
+    padding: 2rem 0 1.5rem 0;
     border-bottom: 1px solid #d0d0d0;
   }
 
@@ -428,20 +428,26 @@ header .desktop ul li {
 }
 
 @media only screen and (max-width: 510px) {
+
   .courses .mobile {
-    width: 100%;
+    width: 90%;
+
+  }
 }
 
 /* THESIS */
 
-/* not working
 .thesis {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0 2rem 1.5rem;
+  padding: 0 0 2rem 1.5rem;
   border-bottom: 1px solid #d0d0d0;
+}
+
+.thesis h1 {
+  margin: 2rem;
 }
 
 .thesis .thesis_content {
@@ -450,25 +456,90 @@ header .desktop ul li {
   align-items: center;
 }
 
-.thesis .thesis_content .thesis_video {
+.thesis .thesis_content .thesis_container {
+  width: 75%;
+  margin: 2rem 1rem 2rem 1.5rem;
+}
+
+.thesis .thesis_content .thesis_container .thesis_video {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 1rem 2rem 1.5rem;
+}
+
+.thesis .thesis_content .thesis_container .thesis_video video {
+  margin-bottom: 1.5rem;
 }
 
 .thesis .thesis_content .thesis_sides {
-  width: 26.5rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.thesis .thesis_content .thesis_sides .thesis_side{
+.thesis .thesis_content .thesis_sides .thesis_side {
+  width: 26.5rem;
+  height: 10.5rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-}*/
+  padding: 1rem;
+}
+
+.thesis .thesis_content .thesis_sides .thesis_side img {
+  height: 100%;
+  width: auto;
+  margin: 1rem;
+}
+
+@media only screen and (max-width: 885px) {
+
+    .thesis {
+      padding: 0 0 1.5rem 0;
+      border-bottom: none;
+    }
+
+    .thesis .thesis_content .desktop {
+      display: none;
+    }
+
+    .thesis .thesis_content .thesis_container .thesis_video video {
+      margin: 0;
+    }
+}
 
 /* FOOTER */
+
+footer {
+  height: 3rem;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+footer .copyright{
+  padding: 1rem 1.5rem;
+}
+
+footer ul {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+footer li {
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 510px) {
+
+  footer .desktop {
+    display: none;
+  }
+}
