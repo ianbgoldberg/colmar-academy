@@ -36,10 +36,10 @@ h3 {
 p {
   color: #b0b0b0;
   font-weight: 200;
-
+  line-height: 1.5rem;
 }
 
-/* THis is not working for "header .desktop", or ".info .info_main"*/
+/* THis is not working for "header .desktop", or ".info .info_main"
 @media only screen and (max-width: 805px) {
   .mobile {
     display: inherit;
@@ -49,6 +49,7 @@ p {
     display: none;
   }
 }
+*/
 
 /* HEADER */
 
@@ -105,6 +106,19 @@ header .desktop ul {
 header .desktop ul li {
     margin: 0.5rem;
   }
+
+@media only screen and (max-width: 660px) {
+  header .desktop {
+    display: none;
+  }
+
+  header .mobile {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 
 /* BANNER */
 
@@ -191,6 +205,7 @@ header .desktop ul li {
   justify-content: center;
   align-items: center;
   margin: 0 1.5rem;
+  border-bottom: 1px solid #d0d0d0;
 }
 
 .info .info_main {
@@ -260,16 +275,24 @@ header .desktop ul li {
   font-size: 0.75rem;
 }
 
-@media only screen and (max-width: 805px) {
+@media only screen and (max-width: 750px) {
 
   .info {
     margin: 0;
     display: flex;
   }
 
+  .info .desktop {
+    display: none;
+  }
+
+  .info .mobile {
+    display: inherit;
+  }
+
   .info .info_sides {
-    border-left: 0px;
-    margin-bottom: 1rem;
+    border-left: 0;
+    margin: 1rem;
   }
 
   .info .info_sides .info_side {
@@ -278,7 +301,7 @@ header .desktop ul li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    margin-bottom: 1rem;
   }
 
   .info .info_sides .info_side img {
@@ -289,12 +312,105 @@ header .desktop ul li {
   }
 
   .info .info_sides .info_side .info_side_text {
-    margin: 0 1rem;
+    width: 100%;
+    margin-left: 1rem;
+    text-align: left;
   }
 
 }
 
 /* COURSES */
+
+.courses {
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d0d0d0;
+  padding: 2rem 0;
+}
+
+.courses h1 {
+  margin-bottom: 2rem;
+}
+
+.courses .line1, .line2 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.courses .course {
+  max-width: 20rem;
+  height: 40rem;
+  height: auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.courses .course img {
+  height: auto;
+  width: 100%;
+}
+
+.courses .course .course_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 1rem;
+}
+
+.courses .course #art {
+  margin: 0.5rem 1rem;
+}
+
+.courses .course h2, p {
+  margin-bottom: 0.5rem
+}
+
+@media only screen and (max-width: 880px) {
+
+  .courses {
+    background-color: #ffffff;
+    padding: 2rem 1rem 1.5rem 1rem;
+    border-bottom: 1px solid #d0d0d0;
+  }
+
+  .courses .desktop {
+    display: none;
+  }
+
+  .courses h1{
+    margin: 0 0 1rem 0;
+  }
+
+  .courses .mobile {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .courses .mobile h2 {
+    width: 100%;
+    background-color: #d0d0d0;
+    text-align: left;
+    padding: 1rem 0 1rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .courses .mobile {
+    width: 100%;
+}
 
 /* THESIS */
 
