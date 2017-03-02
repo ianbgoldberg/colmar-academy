@@ -111,13 +111,20 @@ header .desktop ul {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    color: #505050;
     font-weight: 200;
   }
 
 header .desktop ul li {
     margin: 0.5rem;
   }
+
+header .desktop ul li a {
+  color: #505050;
+}
+
+header .desktop ul a:hover {
+  color: #d0d0d0;
+}
 
 @media only screen and (max-width: 660px) {
   header .desktop {
@@ -130,6 +137,7 @@ header .desktop ul li {
     justify-content: space-around;
     align-items: center;
   }
+
 }
 
 /* BANNER */
@@ -181,9 +189,13 @@ header .desktop ul li {
   margin: 1rem 0;
   color: #ffffff;
   background-color: #505050;
-  width: 100%;
+  width: 90%;
   padding: 0.75rem 0;
   text-align: center;
+}
+
+.banner_content .banner_text p:hover {
+  background-color: #808080;
 }
 
 @media only screen and (max-width: 805px) {
@@ -268,6 +280,10 @@ header .desktop ul li {
   align-items: center;
 }
 
+.info .info_sides .info_side:hover {
+  background-color: #f0f0f0;
+}
+
 .info .info_sides .info_side img {
   width: 35%;
   height: auto;
@@ -293,6 +309,10 @@ header .desktop ul li {
 .info .info_sides .info_side .info_side_text a {
   color: #0099ff;
   font-size: 0.75rem;
+}
+
+.info .info_sides .info_side .info_side_text a:hover {
+  color: #00ccff;
 }
 
 @media only screen and (max-width: 750px) {
@@ -373,6 +393,10 @@ header .desktop ul li {
   margin: 0 1rem 1rem 1rem;
 }
 
+.courses .course:hover {
+  background-color: #f0f0f0;
+}
+
 .courses .course img {
   height: auto;
   width: 100%;
@@ -395,7 +419,6 @@ header .desktop ul li {
 }
 
 @media only screen and (max-width: 885px) {
-
   .courses {
     background-color: #ffffff;
     padding: 2rem 0 1.5rem 0;
@@ -425,13 +448,16 @@ header .desktop ul li {
     padding: 1rem 0 1rem 1rem;
     margin-bottom: 0.5rem;
   }
+
+  .courses .mobile h2:hover {
+    background-color: #f0f0f0;
+  }
 }
 
 @media only screen and (max-width: 510px) {
 
   .courses .mobile {
     width: 90%;
-
   }
 }
 
@@ -490,6 +516,10 @@ header .desktop ul li {
   padding: 1rem;
 }
 
+.thesis .thesis_content .thesis_sides .thesis_side:hover {
+  background-color: #f0f0f0;
+}
+
 .thesis .thesis_content .thesis_sides .thesis_side img {
   height: 100%;
   width: auto;
@@ -535,6 +565,10 @@ footer ul {
 
 footer li {
   margin-right: 1rem;
+}
+
+footer li a h3:hover {
+  color: #d0d0d0;
 }
 
 @media only screen and (max-width: 510px) {
